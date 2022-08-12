@@ -9,14 +9,8 @@
     <projectFile profileName="IIS Express">../src/api/api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b86b27c8-7739-49d1-9c8a-6fa19c726844" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Solution.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/api/api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/api/appsettings.json" afterDir="false" />
+    <list default="true" id="b86b27c8-7739-49d1-9c8a-6fa19c726844" name="Changes" comment="gitignore">
+      <change beforePath="$PROJECT_DIR$/../src/api/api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../src/api/api.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,8 +145,23 @@
       <option name="presentableId" value="Default" />
       <updated>1660271320211</updated>
       <workItem from="1660271323074" duration="1767000" />
-      <workItem from="1660273121957" duration="302000" />
+      <workItem from="1660273121957" duration="641000" />
     </task>
+    <task id="LOCAL-00001" summary="código inicial">
+      <created>1660273542966</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660273542966</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore">
+      <created>1660273720525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660273720525</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,5 +182,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="código inicial" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>
