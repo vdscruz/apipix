@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>api</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,18 +13,28 @@
 
     <ItemGroup>
       <Compile Remove="obj\**" />
+      <Compile Remove="Filters\**" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="obj\**" />
+      <EmbeddedResource Remove="Filters\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="obj\**" />
+      <None Remove="Filters\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Remove="obj\**" />
+      <Content Remove="Filters\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FastEndpoints" Version="4.4.0" />
+      <PackageReference Include="FluentValidation" Version="11.2.0" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.1" />
     </ItemGroup>
 
 </Project>
