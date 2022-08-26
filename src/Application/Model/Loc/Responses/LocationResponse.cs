@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using api.Enum;
+using Application.Enum;
 
-namespace Api.Model.Loc.Responses;
+namespace Application.Model.Loc.Responses;
 
 public class LocationResponse
 {
@@ -18,9 +18,6 @@ public class LocationResponse
         TipoCob = tipoCob;
         Criacao = criacao;
     }
-
-    public LocationResponse()
-    {
-        
-    }
+    
+    public LocationResponse() {}
 }

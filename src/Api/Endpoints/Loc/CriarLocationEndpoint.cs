@@ -1,6 +1,5 @@
-using api.Enum;
-using Api.Model.Loc.Requests;
 using Api.Model.Loc.Responses;
+using Application.Model.Loc.Requests;
 using FluentValidation;
 
 namespace Api.Endpoints.Loc;

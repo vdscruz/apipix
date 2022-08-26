@@ -1,4 +1,4 @@
-namespace api.Enum;
+namespace Application.Enum;
 
 public enum TratamentoErrosEnum
 {

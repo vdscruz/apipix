@@ -1,4 +1,4 @@
-using api.Enum;
+using Application.Enum;
 using FluentValidation;
 
 namespace Api.Validation;

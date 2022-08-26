@@ -1,5 +1,5 @@
 using System.Text.Json.Serialization;
-using api.Enum;
+using Application.Enum;
 using FluentValidation.Results;
 using ErrorResponse = api.Model.ErrorResponse;
 

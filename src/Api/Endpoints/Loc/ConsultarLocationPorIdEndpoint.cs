@@ -1,6 +1,5 @@
-﻿using System.Net;
-using api.Enum;
-using Api.Model.Loc.Responses;
+﻿using Application.Enum;
+using Application.Model.Loc.Responses;
 
 namespace Api.Endpoints.Loc;
 

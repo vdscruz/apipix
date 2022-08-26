@@ -1,13 +1,14 @@
-using Api.Model.Loc.Requests;
-using Api.Model.Loc.Responses;
-using Api.Services.Interfaces;
+using Application.Model.Loc.Requests;
+using Application.Model.Loc.Responses;
+using Application.Services.Interfaces;
 
-namespace Api.Services.Implementation;
+namespace Application.Services.Implementation;
 
 public class LocationService: ILocationService
 {
     public Task<LocationResponse> CriarLocation(CriarLocationRequest req)
     {
+        
         throw new NotImplementedException();
     }
 }

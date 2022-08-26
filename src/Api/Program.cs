@@ -1,7 +1,7 @@
 global using FastEndpoints;
-using Api.Model.Loc.Requests;
 using Api.Validation;
 using Api.Validation.Loc;
+using Application.Model.Loc.Requests;
 using FluentValidation;
 
 
