@@ -6,7 +6,7 @@ namespace Api.Services.Implementation;
 
 public class LocationService: ILocationService
 {
-    public Task<CriarLocationResponse> CriarLocation(CriarLocationRequest req)
+    public Task<LocationResponse> CriarLocation(CriarLocationRequest req)
     {
         throw new NotImplementedException();
     }

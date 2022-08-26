@@ -3,7 +3,6 @@ using Api.Model.Loc.Requests;
 using Api.Validation;
 using Api.Validation.Loc;
 using FluentValidation;
-using FluentValidation.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,10 +13,8 @@ builder.Services
 
 var app = builder.Build();
 app.UseAuthorization();
-
 app.UseMiddleware<ValidationExceptionMiddleware>();
 app.UseFastEndpoints();
 
-app.MapGet("/health", () => {});
 
 app.Run();

@@ -17,7 +17,7 @@ public class ErrorResponse
     [JsonPropertyName("detail")]
     public String Detalhe { get; set; }
 
-    public ErrorResponse(TratamentoErrosEnum erro)
+    protected ErrorResponse(TratamentoErrosEnum erro)
     {
         Tipo = $"https://pix.bcb.gov.br/api/v2/error/{erro}";
         PreencherTituloDetalhe(erro);
@@ -27,6 +27,14 @@ public class ErrorResponse
     {
         switch (erro)
         {
+            #region PayloadLocation
+            case TratamentoErrosEnum.PayloadLocationNaoEncontrado:
+            {
+                Titulo = "PayloadLocation não encontrado.";
+                Detalhe = "Location não encontrada para o \"id\" informado";
+                Codigo = 400;
+                break;
+            }
             case TratamentoErrosEnum.PayloadLocationOperacaoInvalida:
             {
                 Titulo = "PayloadLocation inválido.";
@@ -34,6 +42,14 @@ public class ErrorResponse
                 Codigo = 400;
                 break;
             }
+            case TratamentoErrosEnum.PayloadLocationConsultaInvalida:
+            {
+                Titulo = "PayloadLocation consulta inválida.";
+                Detalhe = "Algum dos parâmetros informados para a consulta não respeitam o schema.";
+                Codigo = 400;
+                break;
+            }
+            #endregion
             default:
             {
                 Titulo = "";

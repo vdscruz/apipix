@@ -1,13 +1,11 @@
+using api.Enum;
 using Api.Model.Loc.Requests;
 using Api.Model.Loc.Responses;
-using Api.Validation.Loc;
 using FluentValidation;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Endpoints.Loc;
 
-[HttpPost("loc"), Tags("PayloadLocation"), AllowAnonymous]
-public class CriarLocationEndpoint: Endpoint<CriarLocationRequest, CriarLocationResponse>
+public class CriarLocationEndpoint: Endpoint<CriarLocationRequest, LocationResponse>
 {
     private readonly IValidator<CriarLocationRequest> _validator;
 
@@ -16,10 +14,25 @@ public class CriarLocationEndpoint: Endpoint<CriarLocationRequest, CriarLocation
         _validator = validator;
     }
 
-
-    public override Task HandleAsync(CriarLocationRequest req, CancellationToken ct)
+    public override void Configure()
     {
-        _validator.ValidateAndThrow(req);
-        return Task.CompletedTask;
+        Post("loc");
+        Tags("PayloadLocation");
+        AllowAnonymous();
+    }
+
+    public override async Task HandleAsync(CriarLocationRequest req, CancellationToken ct)
+    {
+        await _validator.ValidateAndThrowAsync(req, ct);
+
+        var response = new LocationResponse()
+        {
+            Id = 7716,
+            Location = "pix.example.com/qr/v2/2353c790eefb11eaadc10242ac120002",
+            TipoCob = Enum.Parse<TipoCob>(req.TipoCob),
+            Criacao = DateTime.Now,
+        };
+        
+        await SendCreatedAtAsync<ConsultarLocationPorIdEndpoint>(null, response, cancellation: ct);
     }
 }
