@@ -1,4 +1,4 @@
-namespace Application.Enum;
+namespace Api.Enum;
 
 public enum TipoCob
 {

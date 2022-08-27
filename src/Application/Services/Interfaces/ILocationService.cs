@@ -5,5 +5,5 @@ namespace Application.Services.Interfaces;
 
 public interface ILocationService
 {
-    Task<LocationResponse> CriarLocation(CriarLocationRequest req);
+    
 }

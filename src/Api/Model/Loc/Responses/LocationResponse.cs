@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Application.Enum;
+using Api.Enum;
 
-namespace Application.Model.Loc.Responses;
+namespace Api.Model.Loc.Responses;
 
 public class LocationResponse
 {

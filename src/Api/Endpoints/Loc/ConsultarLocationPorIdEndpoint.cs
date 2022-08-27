@@ -1,5 +1,5 @@
-﻿using Application.Enum;
-using Application.Model.Loc.Responses;
+﻿using Api.Model.Loc.Responses;
+using Api.Enum;
 
 namespace Api.Endpoints.Loc;
 
@@ -21,7 +21,7 @@ public class ConsultarLocationPorIdEndpoint: EndpointWithoutRequest<LocationResp
         {
             Id = 7716,
             Location = "pix.example.com/qr/v2/2353c790eefb11eaadc10242ac120002",
-            TipoCob = Enum.Parse<TipoCob>("cob"),
+            TipoCob = System.Enum.Parse<TipoCob>("cob"),
             Criacao = DateTime.Now,
         };
 

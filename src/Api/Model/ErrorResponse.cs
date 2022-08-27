@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using Application.Enum;
+using Api.Enum;
 
-namespace Application.Model;
+namespace Api.Model;
 
 public class ErrorResponse
 {

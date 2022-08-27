@@ -1,9 +1,10 @@
 using System.Text.Json.Serialization;
-using Application.Enum;
+using Api.Enum;
+using ErrorResponse = Api.Model.ErrorResponse;
 
 namespace Api.Validation;
 
-public class ValidationFailureResponse: Application.Model.ErrorResponse
+public class ValidationFailureResponse: ErrorResponse
 {
     [JsonPropertyName("validations"), JsonPropertyOrder(1)]
     public IEnumerable<Validacoes> Validacoes { get; set; }

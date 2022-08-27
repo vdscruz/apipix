@@ -6,9 +6,5 @@ namespace Application.Services.Implementation;
 
 public class LocationService: ILocationService
 {
-    public Task<LocationResponse> CriarLocation(CriarLocationRequest req)
-    {
-        
-        throw new NotImplementedException();
-    }
+    
 }

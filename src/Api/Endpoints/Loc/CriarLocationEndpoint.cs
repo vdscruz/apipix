@@ -1,19 +1,11 @@
-using Application.Enum;
-using Application.Model.Loc.Requests;
-using Application.Model.Loc.Responses;
-using FluentValidation;
+using Api.Model.Loc.Requests;
+using Api.Model.Loc.Responses;
+using Api.Enum;
 
 namespace Api.Endpoints.Loc;
 
 public class CriarLocationEndpoint: Endpoint<CriarLocationRequest, LocationResponse>
 {
-    private readonly IValidator<CriarLocationRequest> _validator;
-
-    public CriarLocationEndpoint(IValidator<CriarLocationRequest> validator)
-    {
-        _validator = validator;
-    }
-
     public override void Configure()
     {
         Post("loc");
@@ -23,13 +15,13 @@ public class CriarLocationEndpoint: Endpoint<CriarLocationRequest, LocationRespo
 
     public override async Task HandleAsync(CriarLocationRequest req, CancellationToken ct)
     {
-        await _validator.ValidateAndThrowAsync(req, ct);
+        //await _validator.ValidateAndThrowAsync(req, ct);
 
         var response = new LocationResponse()
         {
             Id = 7716,
             Location = "pix.example.com/qr/v2/2353c790eefb11eaadc10242ac120002",
-            TipoCob = Enum.Parse<TipoCob>(req.TipoCob),
+            TipoCob = System.Enum.Parse<TipoCob>(req.TipoCob),
             Criacao = DateTime.Now,
         };
         
