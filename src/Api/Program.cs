@@ -5,9 +5,7 @@ using Api.Enum;
 
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services
-    .AddFastEndpoints();
-    //.AddValidators();
+builder.Services.AddFastEndpoints();
 
 
 var app = builder.Build();
