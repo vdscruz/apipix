@@ -1,5 +1,6 @@
 global using FastEndpoints;
 global using FluentValidation;
+
 using Api.Validation;
 using Api.Enum;
 
@@ -10,7 +11,6 @@ builder.Services.AddFastEndpoints();
 
 var app = builder.Build();
 app.UseAuthorization();
-//app.UseFastEndpoints();
 app.UseFastEndpoints(config =>
 {
     config.ErrorResponseBuilder = (failures, i) =>

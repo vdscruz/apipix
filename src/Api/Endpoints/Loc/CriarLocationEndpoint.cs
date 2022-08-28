@@ -24,7 +24,7 @@ public class CriarLocationEndpoint: Endpoint<CriarLocationRequest, LocationRespo
             TipoCob = System.Enum.Parse<TipoCob>(req.TipoCob),
             Criacao = DateTime.Now,
         };
-        
-        await SendCreatedAtAsync<ConsultarLocationPorIdEndpoint>(null, response, cancellation: ct);
+
+        await SendOkAsync(response, ct);
     }
 }
