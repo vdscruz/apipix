@@ -2,6 +2,7 @@ namespace Api.Enum;
 
 public enum TratamentoErrosEnum
 {
+    ErroInternoDoServidor,
     PayloadLocationNaoEncontrado,
     PayloadLocationOperacaoInvalida,
     PayloadLocationConsultaInvalida,

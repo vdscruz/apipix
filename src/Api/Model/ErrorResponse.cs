@@ -17,7 +17,7 @@ public class ErrorResponse
     [JsonPropertyName("detail")]
     public String Detalhe { get; set; }
 
-    protected ErrorResponse(TratamentoErrosEnum erro)
+    public ErrorResponse(TratamentoErrosEnum erro)
     {
         Tipo = $"https://pix.bcb.gov.br/api/v2/error/{erro}";
         PreencherTituloDetalhe(erro);
@@ -27,6 +27,16 @@ public class ErrorResponse
     {
         switch (erro)
         {
+            #region Gerais
+
+            case TratamentoErrosEnum.ErroInternoDoServidor:
+            {
+                Titulo = "Condição inesperada ao processar requisição.";
+                Detalhe = string.Empty;
+                Codigo = 500;
+                break;
+            }
+            #endregion
             #region PayloadLocation
             case TratamentoErrosEnum.PayloadLocationNaoEncontrado:
             {

@@ -2,5 +2,5 @@ namespace Api.Enum;
 
 public enum TipoCob
 {
-    cob, cobv
+    cob = 1, cobv = 2
 }

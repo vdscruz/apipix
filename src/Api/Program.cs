@@ -3,14 +3,19 @@ global using FluentValidation;
 
 using Api.Validation;
 using Api.Enum;
+using Api.Middlewares;
+using Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddFastEndpoints();
+builder.Services
+    .AddFastEndpoints()
+    .AddDependencies();
 
 
 var app = builder.Build();
 app.UseAuthorization();
+app.UseMiddleware<ErrorMiddleware>();
 app.UseFastEndpoints(config =>
 {
     config.ErrorResponseBuilder = (failures, i) =>

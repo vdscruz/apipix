@@ -1,5 +1,5 @@
-﻿using Api.Model.Loc.Requests;
-using Application.Enum;
+﻿using Api.Enum;
+using Api.Model.Loc.Requests;
 
 namespace Api.Validation.Loc;
 
