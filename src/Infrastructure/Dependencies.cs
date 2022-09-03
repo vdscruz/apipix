@@ -12,7 +12,7 @@ public static class Dependencies
     {
         #region # Memory Cache
         services.AddMemoryCache();
-        services.AddScoped(typeof(ICacheService<>), typeof(MemoryCacheService<>));
+        services.AddScoped(typeof(IMemoryCacheService<>), typeof(MemoryCacheService<>));
         #endregion
 
         services.AddScoped<ILocationService, LocationService>();

@@ -27,8 +27,15 @@ public class ErrorResponse
     {
         switch (erro)
         {
-            #region Gerais
+            #region # Gerais
 
+            case TratamentoErrosEnum.NaoEncontrado:
+            {
+                Titulo = "Entidade não encontrada.";
+                Detalhe = string.Empty;
+                Codigo = 404;
+                break;
+            }
             case TratamentoErrosEnum.ErroInternoDoServidor:
             {
                 Titulo = "Condição inesperada ao processar requisição.";
@@ -37,7 +44,8 @@ public class ErrorResponse
                 break;
             }
             #endregion
-            #region PayloadLocation
+            
+            #region # PayloadLocation
             case TratamentoErrosEnum.PayloadLocationNaoEncontrado:
             {
                 Titulo = "PayloadLocation não encontrado.";
@@ -60,11 +68,17 @@ public class ErrorResponse
                 break;
             }
             #endregion
+
+            case TratamentoErrosEnum.CobOperacaoInvalida:
+            case TratamentoErrosEnum.CobVOperacaoInvalida:
+            case TratamentoErrosEnum.LoteCobVOperacaoInvalida:
+            case TratamentoErrosEnum.PixDevolucaoInvalida:
+            case TratamentoErrosEnum.WebhookOperacaoInvalida:
             default:
             {
                 Titulo = "";
                 Detalhe = "";
-                Codigo = 400;
+                Codigo = 500;
                 break;
             }
         }

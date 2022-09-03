@@ -5,6 +5,7 @@ using Api.Validation;
 using Api.Enum;
 using Api.Middlewares;
 using Infrastructure;
+using Infrastructure.Util;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,13 @@ app.UseFastEndpoints(config =>
 
         return validationFailureResponse;
     };
+
+    config.SerializerOptions = options =>
+    {
+        options.Converters.Add(new CustomDateTimeConverter());
+        options.Converters.Add(new CustomDatetimNullConverter());
+    };
+    
 });
 
 

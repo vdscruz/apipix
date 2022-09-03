@@ -3,7 +3,7 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace Infrastructure.Implementations.MemoryCache;
 
-public class MemoryCacheService<T>:ICacheService<T>
+public sealed class MemoryCacheService<T>:IMemoryCacheService<T>
 {
     private readonly IMemoryCache _memoryCache;
 
@@ -12,15 +12,15 @@ public class MemoryCacheService<T>:ICacheService<T>
         _memoryCache = memoryCache;
     }
 
-    public virtual Task<T> GetAsync(string key)
+    public Task<T> GetAsync(string key)
     {
         _memoryCache.TryGetValue(key, out T entry);
         return Task.FromResult<T>(entry);
     }
 
-    public virtual void Set(string key, T entry, MemoryCacheEntryOptions options = null)
+    public void Set(string key, T entry, MemoryCacheEntryOptions options = null)
         => _memoryCache.Set(key, entry, options);
 
-    public virtual void Remove(string key)
+    public void Remove(string key)
         => _memoryCache.Remove(key);
 }

@@ -7,9 +7,9 @@ namespace Application.Implementations.Services;
 
 public class LocationService: ILocationService
 {
-    private readonly ICacheService<IEnumerable<LocationDTO>> _cacheService;
+    private readonly IMemoryCacheService<IEnumerable<LocationDTO>> _cacheService;
 
-    public LocationService(ICacheService<IEnumerable<LocationDTO>> cacheService)
+    public LocationService(IMemoryCacheService<IEnumerable<LocationDTO>> cacheService)
     {
         _cacheService = cacheService;
     }

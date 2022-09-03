@@ -2,7 +2,7 @@
 
 namespace Application.Interfaces.MemoryCache;
 
-public interface ICacheService<T>
+public interface IMemoryCacheService<T>
 {
     Task<T> GetAsync(string key);
     void Set(string key, T entry, MemoryCacheEntryOptions options = null);
