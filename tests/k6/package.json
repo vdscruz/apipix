@@ -1,0 +1,11 @@
+{
+  "name": "k6-test-apipix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "k6 run index.js"
+  },
+  "author": "Vinicius Cruz",
+  "license": "ISC"
+}
