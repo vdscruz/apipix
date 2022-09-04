@@ -1,0 +1,15 @@
+D:\src\learning\apipix\src\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+D:\src\learning\apipix\src\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+D:\src\learning\apipix\src\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+D:\src\learning\apipix\src\Infrastructure\bin\Debug\net6.0\Application.dll
+D:\src\learning\apipix\src\Infrastructure\bin\Debug\net6.0\Application.pdb
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+D:\src\learning\apipix\src\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
